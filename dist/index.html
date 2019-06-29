@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fork Me! FCC: Test Suite Template</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<nav id="navbar">
+  <header>C++ Basics</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a>
+      <li><a class="nav-link" href="#Hello-World">Hello-World</a>
+        <li><a class="nav-link" href="#Comments">Comments</a>
+          <li><a class="nav-link" href="#Creating_Classes">Creating Classes</a>
+            <li><a class="nav-link" href="#Datatypes">Datatypes</a>
+              <li><a class="nav-link" href="#Modifiers">Modifiers</a>
+                <li><a class="nav-link" href="#Decision_Making">Decision Making</a>
+                  <li><a class="nav-link" href="#Loops">Loops</a>
+                    <li><a class="nav-link" href="#Reference">Reference</a>
+                    </li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <p>C++, as we all know is an extension to C language and was developed by Bjarne stroustrup at bell labs. C++ is an intermediate level language, as it comprises a confirmation of both high level and low level language features. C++ is a statically typed,free
+      form, multiparadigm, compiled general-purpose language.<br> <br> C++ is an Object Oriented Programming language but is not purely Object Oriented. Its features like Friend and Virtual, violate some of the very important OOPS features, rendering
+      this language unworthy of being called completely Object Oriented. Its a middle level language.<br> <br>
+
+      <b>Benefits of C++ over C Language:</b> The major difference being OOPS concept, C++ is an object oriented language whereas C language is a procedural language. Apart form this there are many other features of C++ which gives this language an upper
+      hand on C laguage.<br> Following features of C++ makes it a stronger language than C,
+
+      <ol>
+        <li> There is Stronger Type Checking in C++.</li>
+        <li>All the OOPS features in C++ like Abstraction, Encapsulation, Inheritance etc makes it more worthy and useful for programmers.</li>
+        <li>C++ supports and allows user defined operators (i.e Operator Overloading) and function overloading is also supported in it.</li>
+        <li>Exception Handling is there in C++.</li>
+        <li>The Concept of Virtual functions and also Constructors and Destructors for Objects.</li>
+        <li>Inline Functions in C++ instead of Macros in C language. Inline functions make complete function body act like Macro, safely.</li>
+        <li>Variables can be declared anywhere in the program in C++, but must be declared before they are used.</li>
+      </ol>
+
+    </p>
+
+  </section>
+  <section class="main-section" id="Hello-World">
+    <header>Hello-World</header>
+    <p>Here we will discuss one simple and basic C++ program to print "Hello this is C++" and its structure in parts with details and uses.</p>
+    <code>#include <iostream.h>
+using namespace std;
+int main()
+{
+    cout << "Hello this is C++";
+}</code>
+    <p>Header files are included at the beginning just like in C program. Here iostream is a header file which provides us with input & output streams. Header files contained predeclared function libraries, which can be used by users for their ease.<br>      <br> Using namespace std, tells the compiler to use standard namespace. Namespace collects identifiers used for class, object and variables. NameSpace can be used by two ways in a program, either by the use of using statement at the beginning, like
+      we did in above mentioned program or by using name of namespace as prefix before the identifier with scope resolution (::) operator.<br> <br> Example: std::cout
+      << "A";<br> <br> main(), is the function which holds the executing part of program its return type is int.<br> <br>cout
+        <<, is used to print anything on screen, same as printf in C language. cin and cout are same as scanf and printf, only difference is that you do not need to mention format specifiers like, %d for int etc, in cout & cin.</p>
+  </section>
+
+  <section class="main-section" id="Comments">
+    <header>Comments</header>
+    <p>For single line comments, use // before mentioning comment, like<br>
+
+      <code>cout<<"single line";   // This is single line comment</code> For multiple line comment, enclose the comment between /* and */
+      <code>/*this is 
+  a multiple line 
+  comment */</code></p>
+  </section>
+
+  <section class="main-section" id="Creating_Classes">
+    <header>Creating Classes</header>
+    <p>Classes name must start with capital letter, and they contain data variables and member functions. This is a mere introduction to classes, we will discuss classes in detail throughout the C++ tutorial.
+      <code>class Abc
+{
+    int i;           //data variable
+    void display()         //Member Function
+    { 
+        cout << "Inside Member Function";
+    }
+}; // Class ends here
+
+int main()
+{
+    Abc obj;  // Creatig Abc class's object
+    obj.display();  //Calling member function using class object
+}</code> This is how a class is defined, once a class is defined, then its object is created and the member functions are used.<br> Variables can be declared anywhere in the entire program, but must be declared, before they are used. Hence, we don't
+      need to declare variable at the start of the program.</p>
+  </section>
+
+  <section class="main-section" id="Datatypes">
+    <header>Datatypes</header>
+    <p>Let's start with Datatypes. They are used to define type of variables and contents used. Data types define the way you use storage in the programs you write. Data types can be of two types:<br>
+      <ol>
+        <li>Built-in Datatypes</li>
+        <li>User-defined or Abstract Datatypes</li>
+      </ol>
+      <b>Built-in Data Types</b><br> These are the datatypes which are predefined and are wired directly into the compiler. For eg: int, char etc.<br> <br>
+
+      <b>User defined or Abstract data types</b><br>These are the type, that user creates as a class or a structure. In C++ these are classes where as in C language user-defined datatypes were implemented as structures. <br>
+
+      <h4>Basic Built in Datatypes in C++</h4>
+      <table border="1px">
+
+        <tr>
+          <td>char</td>
+          <td>for character storage (1 byte)</td>
+        </tr>
+        <tr>
+          <td>int</td>
+          <td> for integral number (2 bytes)</td>
+        </tr>
+        <tr>
+          <td>float </td>
+          <td>single precision floating point (4 bytes)</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td> double precision floating point numbers (8 bytes)</td>
+        </tr>
+      </table>
+
+      <h4>Other Built in Datatypes in C++</h4>
+      <table border="1px">
+
+        <tr>
+          <td>bool</td>
+          <td> Boolean (True or False)</td>
+        </tr>
+        <tr>
+          <td>void</td>
+          <td> Without any Value</td>
+        </tr>
+        <tr>
+          <td>wchar_t</td>
+          <td> Wide Character</td>
+        </tr>
+      </table>
+    </p>
+  </section>
+  <section class="main-section" id="Modifiers">
+    <header>Modifiers</header>
+    <p>Modifiers in C++ In C++, special words(called modifiers) can be used to modify the meaning of the predefined built-in data types and expand them to a much larger set. There are four datatype modifiers in C++, they are:<br>
+      <ol>
+        <li>long</li>
+        <li>short</li>
+        <li>signed</li>
+        <li>unsigned</li>
+      </ol>
+      The above mentioned modifiers can be used along with built in datatypes to make them more precise and even expand their range.<br><br> Below mentioned are some important points you must know about the modifiers,<br>
+      <ul>
+        <li>long and short modify the maximum and minimum values that a data type will hold.</li>
+        <li>A plain int must have a minimum size of short.</li>
+        <li>Size hierarchy : short int
+          < int < long int</li>
+            <li>Size hierarchy for floating point numbers is : float
+              < double < long double</li>
+                <li>long float is not a legal type and there are no short floating point numbers.</li>
+                <li>Signed types includes both positive and negative numbers and is the default type.</li>
+                <li>Unsigned, numbers are always without any sign, that is always positive.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="main-section" id="Decision_Making">
+    <header>Decision Making</header>
+    <p>
+      <h4>Decision making with if statement</h4>
+      The if statement may be implemented in different forms depending on the complexity of conditions to be tested. The different forms are,<br>
+
+      <ol>
+        <li>Simple if statement</li>
+        <li>
+          if....else statement</li>
+        <li>
+          Nested if....else statement</li>
+        <li>
+          else if statement</li>
+      </ol>
+      <h4>Simple if statement</h4>
+
+      The general form of a simple if statement is,<br>
+      <code>if(expression)
+{
+    statement-inside;
+}
+    statement-outside;</code>
+      <br>If the expression is true, then 'statement-inside' will be executed, otherwise 'statement-inside' is skipped and only 'statement-outside' will be executed.<br> Example:
+
+      <br>
+      <code>#include< iostream.h>
+int main( )
+{
+    int x,y;
+    x=15;
+    y=13;
+    if (x > y )
+    {
+        cout << "x is greater than y";
+    }
+}</code>
+
+      <codeo>Output : x is greater than y</codeo>
+      <br>
+      <h4>if...else statement</h4>
+      The general form of a simple if...else statement is,<br>
+      <code>if(expression)
+{
+    statement-block1;
+}
+else
+{
+    statement-block2;
+}</code>
+      <br> If the 'expression' is true or returns true, then the 'statement-block1' will get executed, else 'statement-block1' will be skipped and 'statement-block2' will be executed.<br> Example:
+
+      <br>
+      <code>void main( )
+{
+    int x,y;
+    x=15;
+    y=18;
+    if (x > y )
+    {
+        cout << "x is greater than y";
+    }
+    else
+    {
+        cout << "y is greater than x";
+    }
+}</code>
+      <codeo>Output: y is greater than x</codeo>
+
+      <h4>Nested if....else statement</h4>
+      The general form of a nested if...else statement is,<br>
+      <code>if(expression)
+{
+    if(expression1)
+    {
+        statement-block1;
+    }
+    else 
+    {
+        statement-block2;
+    }
+}
+else
+{
+    statement-block3;
+}</code>
+      <br> if 'expression' is false or returns false, then the 'statement-block3' will be executed, otherwise execution will enter the if condition and check for 'expression 1'. Then if the 'expression 1' is true or returns true, then the 'statement-block1'
+      will be executed otherwise 'statement-block2' will be executed.<br> Example:
+
+      <br>
+      <code>void main( )
+{
+    int a,b,c;
+    cout << "enter 3 number";
+    cin >> a >> b >> c;
+    if(a > b)
+    {
+        if( a > c)
+        {
+            cout << "a is greatest";
+        }
+        else 
+        {
+            cout << "c is greatest";
+        }
+    }
+    else
+    {
+        if( b> c)
+        {
+            cout << "b is greatest";
+        }
+        else
+        {
+            cout << "c is greatest";
+        }
+    }
+}</code>
+      <br> The above code will print different statements based on the values of a, b and c variables.<br>
+
+      <h4>else-if Ladder</h4>
+      The general form of else-if ladder is,<br>
+      <code>if(expression 1)
+{
+    statement-block1;
+}
+else if(expression 2) 
+{
+    statement-block2;
+}
+else if(expression 3 ) 
+{
+    statement-block3;
+}
+else 
+    default-statement;</code>
+      <br>The expression is tested from the top(of the ladder) downwards. As soon as the true condition is found, the statement associated with it is executed.<br> Example:
+
+      <br>
+      <code>void main( )
+{
+    int a;
+    cout << "enter a number";
+    cin >> a;
+    if( a%5==0 && a%8==0)
+    {
+        cout << "divisible by both 5 and 8";
+    }  
+    else if( a%8==0 )
+    {
+        cout << "divisible by 8";
+    }
+    else if(a%5==0)
+    {
+        cout << "divisible by 5";
+    }
+    else 
+    {
+        cout << "divisible by none";
+    }
+}</code>
+      <br> If you enter value 40 for the variable a, then the output will be:<br>
+      <codeo>Output: divisible by both 5 and 8</codeo>
+    </p>
+
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+
+      <p>
+        There are 3 type of loops in C++ language
+        <ol>
+          <li>while loop</li>
+          <li>
+            for loop</li>
+          <li>
+            do-while loop</li>
+
+        </ol>
+        <h4>while loop</h4>
+
+        while loop can be address as an entry control loop. It is completed in 3 steps.<br>
+
+        <ul>
+          <li>Variable initialization.(e.g int x=0;)</li>
+          <li>condition(e.g while( x
+            <=10))</li>
+              <li>Variable increment or decrement (x++ or x-- or x=x+2)</li>
+        </ul>
+        <br> Syntax:
+        <br>
+        <code>variable initialization;
+while (condition)
+{
+    statements;
+    variable increment or decrement; 
+}</code>
+
+        <h4>for loop</h4>
+        for loop is used to execute a set of statement repeatedly until a particular condition is satisfied. we can say it an open ended loop. General format is,<br>
+
+        <code>for(initialization; condition; increment/decrement)
+{
+    statement-block;
+}</code>
+        <br> In for loop we have exactly two semicolons, one after initialization and second after condition. In this loop we can have more than one initialization or increment/decrement, separated using comma operator. for loop can have only one condition.
+        <br>
+        <h4>Nested for loop</h4>
+
+        We can also have nested for loop, i.e one for loop inside another for loop. Basic syntax is,<br>
+        <code>for(initialization; condition; increment/decrement)
+{
+    for(initialization; condition; increment/decrement)
+    {
+        statement;
+    }
+}</code>
+        <h4>do...while loop</h4>
+        In some situations it is necessary to execute body of the loop before testing the condition. Such situations can be handled with the help of do-while loop. do statement evaluates the body of the loop first and at the end, the condition is checked using
+        while statement. General format of do-while loop is,<br>
+        <code>do
+{
+    // a couple of statements
+}
+while(condition);</code>
+
+        <h4>Jumping out of a loop</h4>
+        Sometimes, while executing a loop, it becomes necessary to skip a part of the loop or to leave the loop as soon as certain condition becocmes true, that is jump out of loop. C language allows jumping from one statement to another within a loop as well
+        as jumping out of the loop.<br>
+
+        <h5>1) break statement</h5>
+        When break statement is encountered inside a loop, the loop is immediately exited and the program continues with the statement immediately following the loop.<br>
+
+        <h5>2) continue statement</h5>
+        It causes the control to go directly to the test-condition and then continue the loop process. On encountering continue, cursor leave the current cycle of loop, and starts with the next cycle.<br>
+      </p>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+
+        <p>All the documentation on this page is taken from <a href="https://www.studytonight.com/cpp/">Study Tonight</a>.</p>
+</main>
+  
+  
+
+</body>
+
+</html>
